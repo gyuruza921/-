@@ -78,6 +78,9 @@ function quickSortDecend(array, start , end) {
 }
 
 const array = [10, 8, 4, 3, 7, 1, 5, 6, 2, 9];
+
+console.log(array);
+
 quickSort(array, 0, array.length - 1);
 console.log(array);
 
