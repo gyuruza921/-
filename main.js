@@ -61,8 +61,9 @@ function quickSortDecend(array, start , end) {
     // このままでは無限ループになる
     while(true){
 
-        while(array[left] < pivot) { left++ } // pivot以上の値を左から探す
-        while(array[right] > pivot) { right-- } // pivot以下の値を右から探す
+        // この部分での処理を前の関数とは逆にする
+        while(array[left] > pivot) { left++ } // pivot以下の値を左から探す
+        while(array[right] < pivot) { right-- } // pivot以上の値を右から探す
         if(left >= right) { break; } // leftとrightが逆転したらwhileを抜ける
         [array[left], array[right]] = [array[right], array[left]]; // 値の入れ替え
         left++;
@@ -71,9 +72,15 @@ function quickSortDecend(array, start , end) {
     }
 
     // 配列の前半と後半をそれぞれ降順にクイックソート
+    quickSortDecend(array, start, left - 1);
+    quickSortDecend(array, right + 1, end)
 
 }
 
 const array = [10, 8, 4, 3, 7, 1, 5, 6, 2, 9];
 quickSort(array, 0, array.length - 1);
+console.log(array);
+
+// 降順にソート
+quickSortDecend(array, 0, array.length - 1);
 console.log(array);
