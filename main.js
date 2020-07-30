@@ -62,9 +62,7 @@ const array = [10, 8, 4, 3, 7, 1, 5, 6, 2, 9];
 quickSortDecend(array, 0, array.length - 1);
 console.log(array);
 
-// 
-// 操作部
-// 
+
 
 // 値のランダムな配列を作る
 
@@ -87,6 +85,11 @@ function addRandomValue(array, n) {
         // ランダムな整数を生成する
         const value = Math.floor( Math.random() * (max - min)) + min ;
 
+        // 生成した値が前の値と同じならやり直し
+        if(value == array[i - 1]){
+            continue;
+        }
+
         // 生成した整数を配列に加える
         array[i] = value;
 
@@ -97,6 +100,10 @@ function addRandomValue(array, n) {
 addRandomValue(array1, 20);
 
 console.log(array1);
+
+// 
+// 操作部
+// 
 
 // ボタンを押すと配列を生成し、段落に表示する
 btnStart.addEventListener("click",()=>{
