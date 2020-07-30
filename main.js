@@ -5,10 +5,16 @@
 // ドキュメント部から各要素を取得
 // 
 
+// 配列を作るボタン
 const btnStart = document.getElementById("start");
 
+// 出来た配列を表示する
 const disp1 = document.getElementById("disp1");
 
+// 作った配列を降順にソートする
+const btnSort = document.getElementById("btn2");
+
+// ソートした配列を表示する
 const disp2 = document.getElementById("disp2");
 
 // 
