@@ -109,3 +109,13 @@ btnStart.addEventListener("click",()=>{
 
     });
 
+// ボタンを押したら配列をソートして結果を表示する
+btnSort.addEventListener( "click",()=>{
+
+    // 配列を降順にソートする
+    quickSortDecend(array1, 0, array1.length - 1);
+
+    // 結果を表示する
+    disp2.innerHTML = array1;
+
+} )
