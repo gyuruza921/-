@@ -88,7 +88,7 @@ function addRandomValue(array, n) {
     
 }
 
-addRandomValue(array1, 100);
+addRandomValue(array1, 20);
 
 console.log(array1);
 
