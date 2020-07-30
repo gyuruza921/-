@@ -74,16 +74,22 @@ const array1 = []
 // 配列にランダムな値を加える関数
 function addRandomValue(array, n) {
 
-    // 
+    // 配列の長さを決める
+    array.length = n;
+
+    // 反復処理
     for(let i = 0; i < n; i++){
 
         const min = 0;
 
         const max = Math.floor(n);
 
+        // ランダムな整数を生成する
         const value = Math.floor( Math.random() * (max - min)) + min ;
 
-        array.push(value);
+        // 生成した整数を配列に加える
+        array[i] = value;
+
     }
     
 }
