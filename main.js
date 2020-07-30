@@ -92,13 +92,6 @@ addRandomValue(array1, 100);
 
 console.log(array1);
 
-btnStart.addEventListener("click",()=>{
-
-    // 配列にランダムな値を追加する
-    disp1.innerText = "push!"
-
-    });
-
 // ボタンを押すと配列を生成し、段落に表示する
 btnStart.addEventListener("click",()=>{
 
